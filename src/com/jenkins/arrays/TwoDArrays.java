@@ -26,7 +26,12 @@ public class TwoDArrays {
 		
 		
 	}
-		
+	
+	/**
+	 * Column Major traversal 
+	 * Traverses the 2d array down each column of every row then moves the next column
+	 * @param a
+	 */
 	public static void columnMajorTraversal(int [][] a) {
 		int rows = a.length;
 		int columns = a[0].length;
@@ -39,6 +44,42 @@ public class TwoDArrays {
 		
 		
 	}
+	
+	/**
+	 * For each, traverses the array in the same way
+	 * But will iterate through every single index
+	 * @param a
+	 */
+	public static void forEachTraversal(int [][]a ) {
+		System.out.println("\nFor each traversal\n");
+		for(int[] row: a ) {
+			for(int i: row) {
+				System.out.println(i);
+				
+			}
+		}
+		
+	}
+	
+	public static void whileLoopTraversal(int [][]a) {
+		System.out.println("\nWhile loop Traversal\n");
+		int rows = a.length;
+		int columns = a[0].length;
+		
+		int i = 0;
+		int j = 0;
+		
+		while(i < rows) {
+			j =0;
+			while(j < a[i].length) {
+				System.out.println(a[i][j]);
+				j ++;
+			}
+			i++;
+		}
+		
+		
+	}
 	public static void main(String[] args) {
 
 		int[][] numMatrix = {{1,2,3,4}, {5,6,7,8}, {9,10,11,12}};
@@ -46,6 +87,10 @@ public class TwoDArrays {
 		rowMajorTraversal(numMatrix);
 		
 		columnMajorTraversal(numMatrix);
+		
+		forEachTraversal(numMatrix);
+		
+		whileLoopTraversal(numMatrix);
 		}
 	}
 
