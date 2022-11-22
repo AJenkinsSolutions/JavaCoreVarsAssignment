@@ -14,13 +14,6 @@ public class CustomerDriver {
 		customer1.getUserInformation();
 		System.out.println(customer1.toString());
 		
-
-		
-
-		
-				
-		
-//		customer1.displayName();
 	}
 
 }
